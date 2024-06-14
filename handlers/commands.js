@@ -727,35 +727,6 @@ function run(message) {
   let dayMap = createDayMap(message);
   const cmd = message.content.toLowerCase().substring(guildSettings.prefix.length).split(" ")[0];
   
-  if (cmd === "cold") {
-	  message.channel.send(":cold_face: :wave:");
-  }
-  
-  if (cmd === "apples") {
-	  message.channel.send(":apple: :wave:");
-  }
-  
-  if (cmd === "vision") {
-	  message.channel.send(":eyes: :wave:");
-  }
-  
-  if (cmd === "pyro") {
-	  message.channel.send(":fire: :wave:");
-  }
-  
-  if (cmd === "optimus") {
-	  message.channel.send(":robot: :wave:");
-  }
-  
-  if (cmd === "saar") {
-	  message.channel.send("spam this :chocolate_bar: to wake up saar");
-  }
-  
-  if (cmd === "rub") {
-	  message.channel.send(":regional_indicator_r: :regional_indicator_u: :regional_indicator_b:  :wave:");
-  }
-  
-  
   if (cmd === "ping" || helpers.mentioned(message, "ping")) {
     message.channel.send(`:ping_pong: !Pong! ${(bot.client.ws.ping).toFixed(0)}ms`).catch((err) => {
       helpers.sendMessageHandler(message, err);

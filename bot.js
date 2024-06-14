@@ -1,17 +1,17 @@
-let discord = require("discord.js");
+let discord = import("discord.js");
 let client = new discord.Client();
 exports.discord = discord;
 exports.client = client;
-const path = require("path");
-const users = require("./stores/users.json");
-let settings = require("./settings.js");
-let commands = require("./handlers/commands.js");
-let guilds = require("./handlers/guilds.js");
-let init = require("./handlers/init.js");
-let helpers = require("./handlers/helpers.js");
-let restricted = require("./handlers/nopermissions.js");
-let dm = require("./handlers/dm.js");
-let checks = require("./handlers/createMissingAttributes.js");
+const path = import("path");
+const users = import("./stores/users.json");
+let settings = import("./settings.js");
+let commands = import("./handlers/commands.js");
+let guilds = import("./handlers/guilds.js");
+let init = import("./handlers/init.js");
+let helpers = import("./handlers/helpers.js");
+let restricted = import("./handlers/nopermissions.js");
+let dm = import("./handlers/dm.js");
+let checks = import("./handlers/createMissingAttributes.js");
 
 client.login(settings.secrets.bot_token);
 
